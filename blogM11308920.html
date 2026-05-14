@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中必比登美食全攻略 - 漫畫感食記</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+TC:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        comic: {
+                            yellow: '#FFDE00',
+                            red: '#FF4B2B',
+                            blue: '#0056FF',
+                            black: '#1A1A1A',
+                            paper: '#FDF6E3'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Bangers"', '"Noto Sans TC"', 'cursive'],
+                        marker: ['"Permanent+Marker"', 'cursive'],
+                        body: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'comic': '8px 8px 0px 0px rgba(0,0,0,1)',
+                        'comic-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'comic-hover': '12px 12px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            background-image: radial-gradient(#ccc 1px, transparent 1px);
+            background-size: 20px 20px;
+            overflow-x: hidden;
+        }
+
+        .comic-border {
+            border: 4px solid #1A1A1A;
+        }
+
+        .halftone-bg {
+            background-image: radial-gradient(#000 1px, transparent 0);
+            background-size: 10px 10px;
+            opacity: 0.1;
+        }
+
+        .speech-bubble {
+            position: relative;
+            background: #fff;
+            border: 3px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50px;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: #1A1A1A transparent;
+            display: block;
+            width: 0;
+        }
+
+        .skew-box {
+            transform: rotate(-1deg);
+        }
+
+        .tilt-right { transform: rotate(2deg); }
+        .tilt-left { transform: rotate(-2deg); }
+
+        @keyframes pulse-custom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pop {
+            animation: pulse-custom 2s infinite ease-in-out;
+        }
+
+        .glitch-text {
+            text-shadow: 2px 2px #FF4B2B, -2px -2px #0056FF;
+        }
+
+        .media-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 4px solid #1A1A1A;
+            box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+            transition: all 0.3s ease;
+        }
+
+        .media-container img:hover {
+            transform: scale(1.02) rotate(1deg);
+        }
+    </style>
+</head>
+<body class="font-body text-comic-black antialiased">
+
+    <!-- Header Section -->
+    <header class="relative py-12 px-4 overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="bg-comic-yellow comic-border p-6 shadow-comic skew-box mb-8">
+                <p class="font-display text-2xl uppercase tracking-widest mb-2">Student ID: M11308920</p>
+                <h1 class="text-4xl md:text-7xl font-black italic glitch-text leading-tight">
+                    台中必比登美食全攻略：
+                </h1>
+                <p class="text-2xl md:text-4xl font-bold mt-2 bg-comic-black text-white inline-block px-4 py-1">
+                    千元有找的奢華，台中人真的買單嗎？
+                </p>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 halftone-bg -z-10"></div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pb-24 space-y-16">
+        
+        <!-- Banner Image -->
+        <section class="media-container mb-20 animate-pop">
+            <div class="relative">
+                <div class="absolute -top-6 -left-6 bg-comic-red text-white font-display px-6 py-2 text-3xl comic-border shadow-comic-sm z-20 rotate-12">
+                    BOOM!
+                </div>
+                <img src='https://opal.google/board/blobs/881035ef-53b8-4508-8224-a401be19650b' alt='台中必比登美食 Banner' />
+                <div class="absolute -bottom-4 -right-4 bg-comic-blue text-white font-bold px-4 py-2 comic-border shadow-comic-sm z-20">
+                    TAICHUNG GOURMET 2024
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-7 speech-bubble shadow-comic tilt-right">
+                <h2 class="text-3xl font-black mb-4 flex items-center">
+                    <span class="bg-comic-red text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 text-xl comic-border">1</span>
+                    吃貨看過來！什麼是「必比登」？
+                </h2>
+                <div class="space-y-4 text-lg leading-relaxed">
+                    <p>
+                        在美食界，如果說米其林星級餐廳是頭戴皇冠的貴族，那麼<span class="font-bold underline decoration-comic-red decoration-4">「必比登推介」（Bib Gourmand）</span>就是那位穿著白 T 恤、腳踩平底鞋，卻對生活極其講究的知己。
+                    </p>
+                    <p>
+                        誰說品味一定要與昂貴掛鉤？必比登的核心精神在於<span class="bg-yellow-200 px-1">「物超所值」</span>——在台灣的定義，就是讓你在 1,000 元台幣內，能氣定神閒地享受三道具備水準的優質料理。
+                    </p>
+                    <div class="p-4 bg-comic-paper border-l-8 border-comic-blue italic mt-4 font-bold">
+                        2024 年名單出爐：台中共有 <span class="text-3xl text-comic-blue">27</span> 家餐廳成功摘榜！
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-5 bg-white comic-border p-6 shadow-comic rotate-2 mt-8 md:mt-0">
+                <h3 class="font-marker text-2xl mb-4 border-b-4 border-comic-black pb-2">台中版名單大揭密</h3>
+                <p class="text-gray-700 leading-loose">
+                    從滷得透亮的豬腳、溫潤的麵點，到讓人驚豔的素食與南洋風味。這不僅是一份名單，更是一場關於「庶民奢華」的集體定義。
+                </p>
+                <div class="mt-6 flex justify-end">
+                    <span class="bg-comic-black text-white px-3 py-1 font-display text-sm">TAICHUNG VIBES</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evolution Timeline (Bento Style) -->
+        <section>
+            <div class="bg-comic-black text-white p-4 comic-border mb-6 skew-box inline-block">
+                <h2 class="text-3xl font-black">二、那些年的追星夢：進榜演變史</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 2020 -->
+                <div class="bg-white comic-border p-6 shadow-comic hover:shadow-comic-hover transition-all transform hover:-translate-y-2">
+                    <div class="text-5xl font-display text-comic-red mb-2">2020</div>
+                    <div class="font-bold text-xl mb-3">驚艷登場</div>
+                    <p class="text-sm text-gray-600">台中首度被看見！21 家餐廳集體出道，名單集中在中區與西區的老字號。</p>
+                </div>
+                <!-- 2022 -->
+                <div class="bg-comic-blue text-white comic-border p-6 shadow-comic hover:shadow-comic-hover transition-all transform hover:-translate-y-2">
+                    <div class="text-5xl font-display text-comic-yellow mb-2">2022</div>
+                    <div class="font-bold text-xl mb-3">瘋狂高峰</div>
+                    <p class="text-sm opacity-90 text-white">名單暴增至 37 家！堪稱台中美食的大通膨時代，只要有在地特色都有機會。</p>
+                </div>
+                <!-- 2024 -->
+                <div class="bg-comic-yellow comic-border p-6 shadow-comic hover:shadow-comic-hover transition-all transform hover:-translate-y-2">
+                    <div class="text-5xl font-display text-comic-black mb-2">2024</div>
+                    <div class="font-bold text-xl mb-3">汰弱留強</div>
+                    <p class="text-sm text-gray-800">精煉至 27 家。展開無情的品質保衛戰，「裡小路」、「繡球」等新秀補位。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section class="relative">
+            <div class="absolute -right-10 top-0 halftone-bg w-40 h-40 rounded-full opacity-20"></div>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <div class="bg-white comic-border p-8 shadow-comic tilt-left relative">
+                        <h2 class="text-3xl font-black mb-6 border-b-4 border-dashed border-comic-red pb-2">三、名單到底香不香？</h2>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="text-4xl">🔖</span>
+                                <div>
+                                    <h4 class="font-bold text-xl">觀光客的救命神符</h4>
+                                    <p class="text-gray-600">資訊爆炸時代的「第一次篩選」，大幅降低踩雷風險。</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-4xl">🏅</span>
+                                <div>
+                                    <h4 class="font-bold text-xl">接地氣的榮耀</h4>
+                                    <p class="text-gray-600">比起星級的高冷，必比登更貼近日常，是對台式生活感的肯定。</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-4xl">🚀</span>
+                                <div>
+                                    <h4 class="font-bold text-xl">品牌大升級</h4>
+                                    <p class="text-gray-600">小店晉升國際名店，帶動營收並活絡台中在地經濟。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locals Viewpoint -->
+        <section class="bg-comic-red comic-border p-8 shadow-comic relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full halftone-bg opacity-10"></div>
+            <div class="relative z-10 text-white">
+                <h2 class="text-4xl font-black mb-8 italic">四、在地人的內心戲：那些成名後的「甜蜜與哀愁」</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white text-comic-black p-6 comic-border rotate-1">
+                        <h4 class="font-bold text-2xl mb-4 text-comic-red">「被奪愛」的失落</h4>
+                        <p class="leading-relaxed">
+                            「這家我從小吃到大，現在竟然要排隊？！」當口袋名單變成排隊名店，在地人的日常節奏被打破，情感上難免產生崩潰碎念。
+                        </p>
+                    </div>
+                    <div class="bg-white text-comic-black p-6 comic-border -rotate-1">
+                        <h4 class="font-bold text-2xl mb-4 text-comic-blue">外籍評審懂吃嗎？</h4>
+                        <p class="leading-relaxed">
+                            台中的口味帶著微甜、鹹香與勾芡文化。外國評審是否能精準捕捉「古早味」？文化主體性與國際標準間的拉鋸始終是焦點。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Predictions -->
+        <section>
+            <div class="flex items-center gap-4 mb-10">
+                <div class="h-1 flex-1 bg-comic-black"></div>
+                <h2 class="text-3xl font-black px-4 bg-comic-yellow comic-border py-2 skew-box shadow-comic-sm">五、未來美食地圖預測！</h2>
+                <div class="h-1 flex-1 bg-comic-black"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white comic-border p-4 shadow-comic hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🏘️</div>
+                    <h5 class="font-bold border-b-2 border-comic-black mb-2">蛋白區大逆襲</h5>
+                    <p class="text-xs text-gray-500">豐原米糕、清水肉圓，未來名單將移出市中心。</p>
+                </div>
+                <div class="bg-white comic-border p-4 shadow-comic hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🎨</div>
+                    <h5 class="font-bold border-b-2 border-comic-black mb-2">老店文青轉身</h5>
+                    <p class="text-xs text-gray-500">「精緻化」是關鍵。舒適、美感、標準化的店家更受青睞。</p>
+                </div>
+                <div class="bg-white comic-border p-4 shadow-comic hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🌍</div>
+                    <h5 class="font-bold border-b-2 border-comic-black mb-2">國際觀多樣性</h5>
+                    <p class="text-xs text-gray-500">南洋風味、現代日韓融合，名單將變身世界地圖。</p>
+                </div>
+                <div class="bg-white comic-border p-4 shadow-comic hover:scale-105 transition-transform">
+                    <div class="text-3xl mb-2">🌱</div>
+                    <h5 class="font-bold border-b-2 border-comic-black mb-2">永續綠色味道</h5>
+                    <p class="text-xs text-gray-500">在地食材、環保理念將成為評審眼中的加分題。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="max-w-3xl mx-auto mt-20">
+            <div class="speech-bubble shadow-comic bg-comic-yellow text-comic-black text-center relative">
+                <h3 class="text-4xl font-black mb-4 font-marker tracking-tighter">THE END</h3>
+                <p class="text-lg font-bold leading-relaxed italic">
+                    「台中必比登不只是一份餐廳名單，它是這座城市飲食文化的成績單，也是在地人與國際觀點的一次次對話。」
+                </p>
+                <div class="mt-6 font-display text-2xl flex justify-center items-center gap-3">
+                    拋開偏見，用舌尖探索台中吧！🍜✨
+                </div>
+                <!-- Comic Accent -->
+                <div class="absolute -top-10 -right-10 bg-white comic-border rounded-full p-4 shadow-comic-sm rotate-12 animate-bounce">
+                    <span class="text-3xl font-black">YUM!</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Cursor or Decorative Elements (Optional for full effect) -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-20 border-[20px] border-comic-black opacity-5"></div>
+
+    <script>
+        // Simple micro-interaction: add shake to titles on hover
+        document.querySelectorAll('h2, h1').forEach(title => {
+            title.addEventListener('mouseenter', () => {
+                title.classList.add('tilt-left');
+            });
+            title.addEventListener('mouseleave', () => {
+                title.classList.remove('tilt-left');
+            });
+        });
+    </script>
+</body>
+</html>
