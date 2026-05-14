@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中美食餐廳介紹與市場趨勢報告 (2024-2026)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        taichung: {
+                            gold: '#C5A059',
+                            dark: '#0F172A',
+                            accent: '#E11D48',
+                            surface: '#1E293B',
+                            glass: 'rgba(30, 41, 59, 0.7)',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #F8FAFC 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(197, 160, 89, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C5A059; }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Hero Header -->
+    <header class="relative min-h-[60vh] flex flex-col items-center justify-center text-center p-6 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-taichung-dark">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="relative z-10 animate-float">
+            <span class="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-widest text-taichung-gold uppercase border border-taichung-gold/30 rounded-full bg-taichung-gold/10">
+                Market Analysis Report
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black font-display mb-6 gradient-text tracking-tight">
+                台中美食餐廳介紹與市場趨勢
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                探究台中作為台灣餐飲「一級戰區」的規模化、儀式感與國際化轉型路徑 (2024-2026)
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 space-y-24">
+
+        <!-- Section 1: Infographic (置頂) -->
+        <section class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-taichung-gold/30"></div>
+                <h2 class="text-2xl font-bold font-display tracking-wide text-taichung-gold">市場趨勢資訊圖表</h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-taichung-gold/30"></div>
+            </div>
+            <div class="image-container overflow-hidden rounded-2xl ring-1 ring-white/10 hover:ring-taichung-gold/50 transition-all duration-700">
+                <img src='https://opal.google/board/blobs/76967129-bbc0-4d2c-b924-db985c7c6101' alt='台中美食趨勢資訊圖表' class="w-full transform hover:scale-105 transition duration-1000" />
+            </div>
+        </section>
+
+        <!-- Section 2: Short Video (置中) -->
+        <section class="max-w-4xl mx-auto relative">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black mb-4 tracking-tighter">視覺感官饗宴</h2>
+                <p class="text-slate-400 max-w-lg mx-auto">
+                    呈現台中旗艦餐廳的建築美學、經典燒肉與米其林精緻料理，感受極致的沈浸式用餐氛圍。
+                </p>
+            </div>
+            
+            <div class="video-container relative z-10 group">
+                <div class="absolute -inset-4 bg-taichung-gold/20 blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+                <video src='https://opal.google/board/blobs/a60f84d5-0dd1-4008-a314-05f4bb5b80dc' alt='台中餐飲美學短影片' controls loop class="relative z-20" />
+            </div>
+
+            <div class="mt-8 flex justify-center">
+                <div class="glass-panel px-6 py-3 rounded-full flex items-center gap-4">
+                    <span class="text-taichung-gold animate-pulse-slow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </span>
+                    <div class="flex flex-col">
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-widest">Recommended Audio</span>
+                        <audio src='https://opal.google/board/blobs/2177ea51-02d5-48c6-b34b-8984798c2358' controls class="h-8 opacity-70 hover:opacity-100 transition" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Detailed Report (置底) -->
+        <section class="max-w-5xl mx-auto">
+            <div class="glass-panel rounded-[2.5rem] overflow-hidden p-8 md:p-16 relative">
+                <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="100" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="relative z-10">
+                    <!-- Summary Bento -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+                        <div class="p-6 rounded-3xl bg-taichung-surface/50 border border-white/5 bento-card">
+                            <div class="text-taichung-gold mb-4 font-bold">市場地位</div>
+                            <p class="text-sm leading-relaxed text-slate-300">台中被譽為「一級戰區」，以高競爭、規模化及建築美學著稱。</p>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-taichung-surface/50 border border-white/5 bento-card">
+                            <div class="text-taichung-gold mb-4 font-bold">四大支柱</div>
+                            <p class="text-sm leading-relaxed text-slate-300">燒肉、火鍋、異國 Fine Dining 及傳統庶民小吃構成核心體系。</p>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-taichung-surface/50 border border-white/5 bento-card">
+                            <div class="text-taichung-gold mb-4 font-bold">米其林成就</div>
+                            <p class="text-sm leading-relaxed text-slate-300">JL Studio 獲三星肯定，帶領台中餐飲邁向國際頂尖實力。</p>
+                        </div>
+                        <div class="p-6 rounded-3xl bg-taichung-surface/50 border border-white/5 bento-card">
+                            <div class="text-taichung-gold mb-4 font-bold">未來趨勢</div>
+                            <p class="text-sm leading-relaxed text-slate-300">2024-2026 從性價比轉向沈浸式體驗與永續文化。</p>
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="space-y-16 prose prose-invert prose-slate max-w-none">
+                        
+                        <article>
+                            <h3 class="text-2xl font-bold text-white flex items-center gap-3 mb-6">
+                                <span class="text-taichung-gold">01</span> 台中飲食文化特色
+                            </h3>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="col-span-2 space-y-4 text-slate-300 leading-loose">
+                                    <p><strong class="text-white">規模化與旗艦化：</strong> 台中餐廳講究大空間、高挑高、重裝潢，公益路商圈的旗艦店已成為城市地標。</p>
+                                    <p><strong class="text-white">儀式感與專業服務：</strong> 代烤服務與華麗擺盤滿足了消費者對尊榮社交儀式的追求。</p>
+                                </div>
+                                <div class="bg-taichung-accent/10 border border-taichung-accent/20 p-6 rounded-2xl flex flex-col items-center justify-center text-center">
+                                    <span class="text-taichung-accent font-black text-xl mb-2">飲食靈魂</span>
+                                    <p class="text-sm text-slate-200">東泉辣椒醬 (Dongquan Chili Sauce)</p>
+                                    <div class="mt-4 w-12 h-1 bg-taichung-accent/30 rounded-full"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h3 class="text-2xl font-bold text-white flex items-center gap-3 mb-8">
+                                <span class="text-taichung-gold">02</span> 知名餐廳分類與代表品牌
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="space-y-6">
+                                    <div class="bg-white/5 p-6 rounded-2xl border-l-4 border-taichung-gold">
+                                        <h4 class="font-bold text-lg mb-2">燒肉與火鍋</h4>
+                                        <p class="text-sm text-slate-400 mb-4">台中為發源地，引領全台餐飲風潮</p>
+                                        <ul class="text-sm space-y-2 text-slate-300">
+                                            <li>• 屋馬燒肉 (Umai)</li>
+                                            <li>• 茶六燒肉堂</li>
+                                            <li>• 俺達の肉屋 (米其林一星)</li>
+                                            <li>• 輕井澤集團 (禪風火鍋)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white/5 p-6 rounded-2xl border-l-4 border-slate-500">
+                                        <h4 class="font-bold text-lg mb-2">傳統小吃與美學甜點</h4>
+                                        <p class="text-sm text-slate-400 mb-4">第二市場核心區與勤美視覺系咖啡</p>
+                                        <ul class="text-sm space-y-2 text-slate-300">
+                                            <li>• 阿坤麵、范記金之園 (必比登)</li>
+                                            <li>• 西區老宅改建風格店鋪</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bg-taichung-dark p-8 rounded-3xl ring-1 ring-white/10 shadow-inner">
+                                    <h4 class="font-bold text-taichung-gold text-lg mb-4 flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                        Michelin Stars
+                                    </h4>
+                                    <div class="space-y-4">
+                                        <div class="border-b border-white/10 pb-4">
+                                            <span class="text-xs font-bold text-taichung-gold uppercase tracking-tighter">3 Stars</span>
+                                            <p class="text-lg font-bold">JL Studio</p>
+                                            <p class="text-xs text-slate-400">Modern Singaporean Cuisine</p>
+                                        </div>
+                                        <div class="border-b border-white/10 pb-4">
+                                            <span class="text-xs font-bold text-slate-400 uppercase tracking-tighter">1 Star</span>
+                                            <p class="font-bold">Forchetta / 鹽之華 / 澀Sur-</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Selection</span>
+                                            <p class="text-sm">富鼎旺豬腳、范記金之園...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <h3 class="text-2xl font-bold text-white flex items-center gap-3 mb-8">
+                                <span class="text-taichung-gold">03</span> 2024-2026 市場趨勢
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="p-6 bg-taichung-gold/5 rounded-2xl border border-taichung-gold/10 hover:bg-taichung-gold/10 transition">
+                                    <h5 class="font-bold mb-2">沈浸式體驗</h5>
+                                    <p class="text-sm text-slate-400">超越進食，強調空間與燈光藝術的整合感。</p>
+                                </div>
+                                <div class="p-6 bg-taichung-gold/5 rounded-2xl border border-taichung-gold/10 hover:bg-taichung-gold/10 transition">
+                                    <h5 class="font-bold mb-2">永續與透明</h5>
+                                    <p class="text-sm text-slate-400">米其林綠星影響力，產地到餐桌透明化。</p>
+                                </div>
+                                <div class="p-6 bg-taichung-gold/5 rounded-2xl border border-taichung-gold/10 hover:bg-taichung-gold/10 transition">
+                                    <h5 class="font-bold mb-2">深夜餐飲鏈</h5>
+                                    <p class="text-sm text-slate-400">高檔燒肉與火鍋跨足 24 小時經營模式。</p>
+                                </div>
+                                <div class="p-6 bg-taichung-gold/5 rounded-2xl border border-taichung-gold/10 hover:bg-taichung-gold/10 transition">
+                                    <h5 class="font-bold mb-2">北屯新戰場</h5>
+                                    <p class="text-sm text-slate-400">隨人口移入，旗艦店布局轉向北屯重劃區。</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="bg-taichung-gold/10 p-10 rounded-3xl border border-taichung-gold/20">
+                            <h3 class="text-xl font-bold mb-4">結論</h3>
+                            <p class="text-slate-300 leading-relaxed italic">
+                                台中餐飲市場正處於從「追求規模」向「精緻體驗」轉型的關鍵期。2024-2026年間，除了燒肉與火鍋持續蟬聯霸主地位外，米其林星級餐廳的引領與傳統老店的數位轉型，將使台中美食更具國際競爭力與文化深度。
+                            </p>
+                        </article>
+
+                        <footer class="pt-12 border-t border-white/5">
+                            <h4 class="text-sm font-bold text-slate-500 uppercase mb-4 tracking-widest">引用文獻 Reference</h4>
+                            <ol class="text-xs text-slate-500 space-y-2 italic">
+                                <li>1. 〈2024-2026 台中餐飲市場趨勢與美食指南報告〉，美食評論回顧叢書。</li>
+                                <li>2. Michelin Guide (2024). The Michelin Guide Taiwan 2024 Selection.</li>
+                                <li>3. 台中市政府觀光旅遊局，「台中美食餐廳統計與地理分佈專題」(2025)。</li>
+                                <li>4. 〈東泉辣椒醬與台中飲食認同之研究〉，在地文化回顧論文。</li>
+                            </ol>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Footer (Requirement) -->
+        <div class="w-full text-center py-12 pb-24">
+            <div class="h-px w-32 mx-auto bg-slate-700 mb-8"></div>
+            <p class="text-slate-500 tracking-[0.2em] font-light">
+                【主題探索報告】by <span class="italic text-taichung-accent font-bold">M11308920</span>
+            </p>
+            <p class="text-[10px] text-slate-700 mt-2">STUDENT ID: M11308920</p>
+        </div>
+
+    </main>
+
+    <script>
+        // Smooth reveal animation on scroll for bento cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
